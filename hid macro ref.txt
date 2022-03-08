@@ -1,0 +1,89 @@
++ = Shift
+^ = Control
+% = Alt
+~ = Enter
+# = win key
+= = + [ex: ctrl+ - ^=]
+
+Surround sequences of characters or key names with parentheses in order to
+modify them as a group.  For example, '+abc' shifts only 'a', while '+(abc)' shifts
+¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+( = Begin modifier group (see above)
+) = End modifier group (see above)
+{ = Begin key name text (see below)
+} = End key name text (see below)
+Supported characters:
+Any character that can be typed is supported.  Surround the modifier keys
+listed above with braces in order to send as normal text.
+Supported key names (surround these with braces):
+BKSP, BS, BACKSPACE
+BREAK
+CAPSLOCK
+CLEAR
+DEL
+DELETE
+DOWN
+END
+ENTER
+ESC
+ESCAPE
+F1
+F2
+F3
+F4
+F5
+F6
+F7
+F8
+F9
+F10
+F11
+F12
+F13
+F14
+F15
+F16
+HELP
+HOME
+INS
+LEFT
+NUMLOCK
+NUM 0-9
+PGDN
+PGUP
+PRTSC(doesn’t work for some reason)
+RIGHT
+SCROLLLOCK
+TAB
+UP
+Follow the keyname with a space and a number to send the specified key a
+given number of times (e.g., {left 6}).
+There is a command to send mouse click:
+HIDMacros.MouseClick x, y, action
+Parameters are:
+x	x coordinate
+y	y coordinate
+action	number saying what should be done at coordinates 
+•	0 - just move mouse pointer
+•	1 - left click
+•	2 - middle click
+•	3 - right click
+•	4 - left double click
+•	5 - middle double click
+•	6 - right double click
+So finally example of Start - Run activation at screen 1280x1024 with delay.
+HIDMacros.MouseClick 49, 980, 1
+HIDMacros.Sleep 600
+HIDMacros.MouseClick 90, 875, 1
+HIDMacros.SendKeys "Baobob Miller "
+sleep 10
+HIDMacros.SendKeys "Baobob Miller "
+sleep 10
+HIDMacros.SendKeys "Baobob Miller "
+= Baobob Miller Baobob Miller Baobob Miller 
+Basically create a new Marco > Select run application > paste the path of the folder > add a SPACE and . (Period)
+Example: "C:\Users\ABC\Downloads ." must include the " "
+Autohotkey
+!F7:: Send {LWin down}{PrintScreen}{LWin up}
+
+
